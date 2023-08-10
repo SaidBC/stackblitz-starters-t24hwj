@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+:root{
+  --clr1:#ccc;
+  --online:#31A24C;
+  --offline:#666;
+}
+body {
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+}
+main {
+  width: 100%;
+  height: 100%;
+}
+/* Header */
+main header {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.searchBox {
+  width: 60%;
+  min-width: 125px;
+  height: 50px;
+  border-radius: 30px;
+  background: #eee;
+  border: none;
+  outline: none;
+  color: #222;
+  border: 1px solid var(--clr1);
+  font-size: 17px;
+  padding-left: 15px;
+}
+.searchBox::placeholder {
+  color: #999;
+}
+.editBox {
+  width: 50px;
+  height: 50px;
+  background: #00b0ff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+}
+/* Friend Section */
+.friends {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+}
+.friend {
+  position:relative;
+  width: 80%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+  cursor:pointer;
+  transition:.15s ease-in-out;
+}
+.friend:hover{
+  background: #00b0ff;
+}
+.friend:hover *{
+  color:white;
+}
+.friend::before {
+  content: '';
+  position: absolute;
+  width: 75%;
+  height: 2px;
+  border-radius: 1px;
+  left: 10%;
+  top: 0;
+  background: var(--clr1);
+}
+.profile{
+  position: relative;
+}
+.friend .profileLogo {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+}
+.availability{
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: var(--online);
+  border:2.5px solid white;
+  border-radius: 50%;
+  bottom: 5px;
+  right: 0px;
+}
+.friend div:not(.profile){
+  position:absolute;
+  left:calc(10% + 60px + 15px);
+}
+.lastMsg,.lastMsgTime{
+  color:#777;
+}
+.lastMsg{
+  margin-top: -10px;
+  margin-left:5px;
+}
+.lastMsgTime{
+  position:relative;
+  left:-5%;
+}
+
