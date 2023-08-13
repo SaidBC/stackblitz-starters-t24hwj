@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
-:root{
-  --clr1:#ccc;
-  --online:#31A24C;
-  --offline:#666;
+:root {
+  --clr1: #ccc;
+  --online: #31a24c;
+  --offline: #666;
 }
 body {
   margin: 0;
@@ -13,7 +13,7 @@ main {
   height: 100%;
 }
 /* Header */
-main header {
+main .SearchBar {
   position: relative;
   width: 100%;
   height: 150px;
@@ -56,21 +56,21 @@ main header {
   width: 100%;
 }
 .friend {
-  position:relative;
+  position: relative;
   width: 80%;
   height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 10%;
-  cursor:pointer;
-  transition:.15s ease-in-out;
+  cursor: pointer;
+  transition: 0.15s ease-in-out;
 }
-.friend:hover{
+.friend:hover {
   background: #00b0ff;
 }
-.friend:hover *{
-  color:white;
+.friend:hover * {
+  color: white;
 }
 .friend::before {
   content: '';
@@ -82,7 +82,7 @@ main header {
   top: 0;
   background: var(--clr1);
 }
-.profile{
+.profile {
   position: relative;
 }
 .friend .profileLogo {
@@ -90,29 +90,29 @@ main header {
   height: 60px;
   border-radius: 30px;
 }
-.availability{
+.availability {
   position: absolute;
   width: 10px;
   height: 10px;
   background-color: var(--online);
-  border:2.5px solid white;
+  border: 2.5px solid white;
   border-radius: 50%;
   bottom: 5px;
   right: 0px;
 }
-.friend div:not(.profile){
-  position:absolute;
-  left:calc(10% + 60px + 15px);
+.friend div:not(.profile) {
+  position: absolute;
+  left: calc(10% + 60px + 15px);
 }
-.lastMsg,.lastMsgTime{
-  color:#777;
+.lastMsg,
+.lastMsgTime {
+  color: #777;
 }
-.lastMsg{
+.lastMsg {
   margin-top: -10px;
-  margin-left:5px;
+  margin-left: 5px;
 }
-.lastMsgTime{
-  position:relative;
-  left:-5%;
+.lastMsgTime {
+  position: relative;
+  left: -5%;
 }
-
